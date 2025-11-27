@@ -1,0 +1,12 @@
+{
+  "name": "Postgres en Codespaces",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  "forwardPorts": [5432],
+
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y postgresql-client",
+
+  "remoteUser": "vscode"
+}
